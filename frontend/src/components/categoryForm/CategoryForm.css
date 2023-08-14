@@ -1,0 +1,136 @@
+.wrapper {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: "Rubik", sans-serif;
+  background-color: #F7F0F4;
+}
+
+div.form-tittle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 15%;
+}
+
+.category-form {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top:30px;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow: hidden;
+  background-color: white;
+}
+
+h3.form-header {
+  font-family: "Rubik", sans-serif;
+  font-weight: bold;
+  font-size: x-large;
+  color: #fff;
+  padding: 0rem 0rem;
+  margin: 20px;
+}
+
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 20px;
+}
+
+form > input,
+textarea {
+  font-size: 16px;
+  margin-left: 50%;
+  padding: 10px;
+  border: none;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+input[type="text"],
+textarea {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.category-form label {
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0px;
+  width: 70%;
+}
+
+.category-form label > span {
+  font-family: Roboto, sans-serif;
+  font-size: 1.1rem;
+  float: left;
+  width: 100%;
+  text-align: left;
+  padding-right: 10px;
+  margin-top: 10px;
+  color: #888;
+  padding: 0px 0px 5px 5px;
+}
+
+.category-form label {
+  font-size: 2rem;
+  margin: 10px;
+}
+
+.category-form label > input,
+select,
+textarea {
+  font-family: Roboto, sans-serif;
+  height: 2.1rem;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+textarea {
+  margin-left: 0;
+}
+
+.category-form label > input:focus,
+textarea:focus {
+  border: 3px solid #a61f69;
+  outline: none;
+}
+
+input[type="file"] {
+  margin: 20px;
+  font-family: Rubik, sans-serif;
+  color: #888;
+}
+
+input[type="file"]::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background: #f2921d;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-family: Rubik, sans-serif;
+  font-size: 1rem;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background: #f7c281;
+}
+
+.category-form button {
+  width: 200px;
+  height: 40px;
+  margin: 20px;
+}

@@ -1,0 +1,119 @@
+stages:
+  - build
+  - test
+  - deploy
+
+infra_deploy:
+  stage: deploy
+  before_script:
+    - cd infra/terraform
+  script:
+    - echo $(pwd)
+    - gitlab-terraform init
+    - gitlab-terraform plan
+    - |
+      if [ $? -eq 0 ]; then 
+        gitlab-terraform apply
+      else
+        echo "Terraform plan failed!"
+      fi
+  rules:
+    - changes:
+        - infra/terraform/**/*
+      if: '$CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_REF_NAME == "feature/iac"'
+  image: registry.gitlab.com/gitlab-org/terraform-images/stable:latest
+
+build_frontend:
+  stage: build
+  before_script:
+    - cd frontend
+  script:
+    - echo $(pwd)
+    - npm install --cache /cache/npm --prefer-offline
+    - npm run build
+    - echo $(ls)
+  after_script:
+    - rm -rf frontend/node_modules
+  cache:
+    key: frontend-dependencies
+    paths:
+      - frontend/node_modules/
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" && ($CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "develop" || $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "main")'
+  image: node:16-alpine
+  artifacts:
+    paths:
+      - frontend/dist/
+
+test_frontend:
+  stage: test
+  needs:
+    - build_frontend
+  before_script:
+    - cd frontend
+    - npm install -g jest
+    - npm install jest-environment-jsdom --save-dev
+  script:
+    - echo $(pwd)
+    - echo "Testing"
+    - npm test
+    - echo "Finished testing"
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" && ($CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "develop" || $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "main")'
+  image: node:16-alpine
+
+deploy_frontend:
+  stage: deploy
+  needs:
+    - build_frontend
+    - test_frontend
+  before_script:
+    - cd frontend
+  script:
+    - echo $(pwd)
+    - echo $(ls)
+    - echo "Deploy frontend to S3 bucket"
+    - aws s3 cp dist/ s3://frontend-c3-equipo3 --recursive
+  after_script:
+    - rm -rf frontend/dist/
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" && ($CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "develop" || $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "main")'
+  image: registry.gitlab.com/gitlab-org/cloud-deploy/aws-base:latest
+
+test_backend:
+  stage: test
+  before_script:
+    - cd backend
+  script:
+    - echo $(pwd)
+    - echo "Running tests ..."
+    - bash ../generate_application_secrets.sh
+    - mvn test
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" && ($CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "develop" || $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "main")'
+  image: maven:latest
+
+deploy_backend:
+  stage: deploy
+  needs:
+    - test_backend
+  before_script:
+    - apt-get update && apt-get install -y openssh-client
+    - echo "$SSH_PRIVATE_KEY" > private_key.pem
+    - chmod 400 private_key.pem
+  script:
+    - echo $(pwd)
+    - echo "Deploying started ..."
+    - scp -i private_key.pem -o StrictHostKeyChecking=no -r backend Dockerfile ubuntu@$SERVER_IP:/home/ubuntu/
+    - echo "spring.datasource.username=${DB_USERNAME}" > application-secrets.properties
+    - echo "spring.datasource.password=${DB_PASSWORD}" >> application-secrets.properties
+    - echo "aws.access.key.id=${AWS_ACCESS_KEY_ID}" >> application-secrets.properties
+    - echo "aws.secret.access.key=${AWS_SECRET_ACCESS_KEY}" >> application-secrets.properties
+    - echo "aws.s3.region=${AWS_DEFAULT_REGION}" >> application-secrets.properties
+    - echo "aws.s3.bucket.name=${AWS_BUCKET_NAME}" >> application-secrets.properties
+    - scp -i private_key.pem -o StrictHostKeyChecking=no application-secrets.properties ubuntu@3.141.149.37:/home/ubuntu/backend/src/main/resources/
+    - echo $(ls)
+    - ssh -i private_key.pem -o StrictHostKeyChecking=no ubuntu@$SERVER_IP 'bash -s' < infra/scripts/instance_script.sh
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" && ($CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "develop" || $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "main")'
+  image: ubuntu:mantic

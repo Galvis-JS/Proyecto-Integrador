@@ -1,0 +1,65 @@
+.container-confirm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 80vh;
+    padding: 1rem;
+    background-color: #e8e3e7;
+}
+
+.card-confirm{
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 1rem;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 2px 5px 5px #0003;
+}
+
+.card-confirm h2 {
+    color: #400e32;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 1rem 0rem;
+}
+
+.card-confirm > img {
+    width: 100%;
+}
+
+.here {
+    text-decoration: underline;
+    color: #a61f69;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+     .card-confirm {
+        width: 70%;
+    }
+
+    .body-confirm {
+        width: 100%;
+    }
+
+    .btn-confirm {
+        width: 70%;
+        align-self: center;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .card-confirm {
+        width: 50%;
+    }
+
+    .btn-confirm {
+        width: 50%;
+    }
+}

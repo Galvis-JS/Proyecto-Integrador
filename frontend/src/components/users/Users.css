@@ -1,0 +1,112 @@
+.p-datatable-table th {
+    background-color: #a61f69 !important;
+    font-family: Roboto;
+    color: white !important ;
+    text-align: center !important;
+}
+
+.p-icon{
+    color:white;
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight{
+    background: #a61f69 !important;
+    border-color: #a61f69 !important;
+    color:white  !important;
+}
+
+.p-paginator p-component p-paginator-bottom{
+    text-align: center;
+}
+
+.p-paginator{
+    display:flex;
+    justify-content: center;
+}
+
+ .trash-container {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #f2921d;
+    border-radius: 5px;
+    padding: 8px;
+    float: right;
+    cursor:pointer;
+}
+
+.edit-container {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #f2921d;
+    border-radius: 5px;
+    padding: 8px;
+    float: right;
+    cursor:pointer;
+}
+
+.edit-container:hover{
+    background-color: #a61f69;
+}
+
+.trash-container:hover{
+    background-color: #a61f69;
+}
+
+.actions-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.actions-container svg {
+    width: 15px;
+    height: 15px;
+    display: inline;
+}
+
+.cities-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+    width: 100%;
+}
+
+button.p-paginator-page.p-paginator-element.p-link.p-paginator-page-start.p-highlight{
+    border-radius: 50px;
+}
+
+button.p-paginator-page.p-paginator-element.p-link{
+    border-radius: 50px;
+} 
+button.p-paginator-page.p-paginator-element.p-link.p-paginator-page-start{
+    border-radius: 50px;
+}
+
+svg.p-icon.p-paginator-icon{
+    color:#a61f69
+}
+
+div.p-datatable.p-component.p-datatable-responsive-scroll.p-datatable-striped{
+    border:10px;
+    font-size: 1rem;
+    font-family: Roboto;
+}
+
+div.p-datatable-wrapper{
+    border-top-left-radius:  15px;
+    border-top-right-radius:  15px;
+}
+
+div.p-paginator.p-component.p-paginator-bottom{
+    border-bottom-left-radius:  15px;
+    border-bottom-right-radius:  15px;
+}
+
+button.p-paginator-next.p-paginator-element.p-link{
+    display:none;
+}
+
+svg.p-icon.p-paginator-icon{
+    display: none;
+}

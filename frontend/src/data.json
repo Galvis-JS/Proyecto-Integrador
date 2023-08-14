@@ -1,0 +1,183 @@
+{
+    "coworking": [
+        {
+            "officeId": 1,
+            "images": [
+                "/images/photo1.jpg",
+                "/images/photo2.jpg",
+                "/images/photo3.jpg",
+                "/images/photo4.jpg",
+                "/images/photo5.jpg"
+            ],
+            "name": "Gamer",
+            "category": {
+                "id": 1,
+                "name": "Coworking Sectorial"
+            },
+            "city": "Buenos Aires",
+            "address": "Av. Pres. Figueroa Alcorta 7597, C1428 CABA",
+            "rating": 4.5,
+            "description": "Nuestra oficina 'Gamer' es un espacio único y emocionante diseñado específicamente para el sector de los videojuegos. Como coworking sectorial, esta oficina se adapta a las necesidades particulares de los desarrolladores y jugadores profesionales, ofreciendo un ambiente ideal para la innovación y la colaboración en este campo dinámico."
+        },
+        {
+            "officeId": 5,
+            "images": [
+                "/images/photo6.jpg",
+                "/images/photo7.jpg",
+                "/images/photo8.jpg",
+                "/images/photo9.jpg",
+                "/images/photo10.jpg"
+            ],
+            "name": "Moda",
+            "category": {
+                "id": 1,
+                "name": "Coworking Sectorial"
+            },
+            "city": "Rosario",
+            "address": "Av. Pellegrini 1500, S2000 Rosario",
+            "rating": 3.9,
+            "description": "Nuestra oficina 'Moda' en Rosario se centra en el sector de la moda, proporcionando un espacio de coworking sectorial que satisface las necesidades de los diseñadores, minoristas y profesionales relacionados con la moda."
+        },
+        {
+            "officeId": 2,
+            "images": [
+                "/images/photo11.jpg",
+                "/images/photo12.jpg",
+                "/images/photo13.jpg",
+                "/images/photo14.jpg",
+                "/images/photo15.jpg"
+            ],
+            "name": "Compartidos",
+            "category": {
+                "id": 2,
+                "name": "Coworking compartido"
+            },
+            "city": "Cordoba",
+            "address": "Bv. Sarmiento, Av. Uruguay esq, X5152 Villa Carlos Paz, Córdoba",
+            "rating": 2,
+            "description": "'Compartidos' es un espacio de coworking compartido en Córdoba, perfecto para profesionales que buscan una atmósfera colaborativa y estimulante. Esta oficina está diseñada para fomentar la interacción y el intercambio de ideas, haciendo de 'Compartidos' el lugar ideal para crecer y prosperar en tu carrera."
+        },
+        {
+            "officeId": 6,
+            "images": [
+                "/images/photo16.jpg",
+                "/images/photo17.jpg",
+                "/images/photo18.jpg",
+                "/images/photo19.jpg",
+                "/images/photo20.jpg"
+            ],
+            "name": "Profesionales",
+            "category": {
+                "id": 2,
+                "name": "Coworking compartido"
+            },
+            "city": "La Plata",
+            "address": "Av. 51 Nte. 1170, B1900 La Plata, Buenos Aires",
+            "rating": 3.6,
+            "description": "'Profesionales' es un coworking compartido en La Plata, pensado para distintos tipos de profesionales. Promovemos la sinergia y colaboración entre diferentes disciplinas, en un ambiente de trabajo cómodo y productivo."
+        },
+        {
+            "officeId": 3,
+            "images": [
+                "/images/photo21.jpg",
+                "/images/photo22.jpg",
+                "/images/photo23.jpg",
+                "/images/photo24.jpg",
+                "/images/photo1.jpg"
+            ],
+            "name": "Cubiculos",
+            "category": {
+                "id": 3,
+                "name": "Coworking fijo"
+            },
+            "city": "Buenos Aires",
+            "address": "Av. Pres. Figueroa Alcorta 7597, C1428 CABA",
+            "rating": 5,
+            "description": "En 'Cubiculos', ofrecemos un coworking fijo en Buenos Aires, donde cada profesional tiene su propio espacio dedicado. Esta oficina es perfecta para aquellos que buscan un equilibrio entre la colaboración y la concentración, proporcionando un ambiente de trabajo estructurado y eficiente."
+        },
+        {
+            "officeId": 7,
+            "images": [
+                "/images/photo2.jpg",
+                "/images/photo3.jpg",
+                "/images/photo4.jpg",
+                "/images/photo5.jpg",
+                "/images/photo6.jpg"
+            ],
+            "name": "Freelance",
+            "category": {
+                "id": 3,
+                "name": "Coworking fijo"
+            },
+            "city": "San Juan",
+            "address": "Av. Circunvalación 1100, J5402 San Juan",
+            "rating": 4.2,
+            "description": "En 'Freelance', ofrecemos espacios de trabajo fijos en San Juan, ideales para profesionales independientes que buscan un ambiente de trabajo tranquilo y productivo. Cada profesional tiene su propio escritorio, lo que permite un equilibrio perfecto entre colaboración y concentración."
+        },
+        {
+            "officeId": 4,
+            "images": [
+                "/images/photo7.jpg",
+                "/images/photo8.jpg",
+                "/images/photo9.jpg",
+                "/images/photo10.jpg",
+                "/images/photo11.jpg"
+            ],
+            "name": "Start Up",
+            "category": {
+                "id": 4,
+                "name": "Coworking incubador"
+            },
+            "city": "Mendoza",
+            "address": "Av. de Acceso Este 3280, M5500 Guaymallén, Mendoza",
+            "rating": 3.4,
+            "description": "Nuestra oficina 'Start Up' en Mendoza es un coworking incubador diseñado para apoyar a las startups emergentes. Proporcionamos un entorno enriquecedor que fomenta la innovación y el crecimiento, ofreciendo recursos y oportunidades para ayudar a las startups a alcanzar su máximo potencial."
+        },
+        {
+            "officeId": 8,
+            "images": [
+                "/images/photo12.jpg",
+                "/images/photo13.jpg",
+                "/images/photo14.jpg",
+                "/images/photo15.jpg",
+                "/images/photo16.jpg"
+            ],
+            "name": "Innovadores",
+            "category": {
+                "id": 4,
+                "name": "Coworking incubador"
+            },
+            "city": "Santa Fe",
+            "address": "Av. Freyre 2150, S3000 Santa Fe",
+            "rating": 4.7,
+            "description": "Nuestra oficina 'Innovadores' es un espacio de coworking incubador en Santa Fe, diseñado para fomentar y apoyar a las startups y empresas innovadoras. Proporcionamos un ambiente de trabajo enriquecedor y colaborativo que promueve la innovación y el crecimiento."
+        }
+    ],
+    "categories": [
+        {
+            "id": 1,
+            "name": "Coworking Sectorial",
+            "image": "/images/photo1.jpg",
+            "results": 2
+        },
+        {
+            "id": 2,
+            "name": "Coworking compartido",
+            "image": "/images/photo2.jpg",
+            "results": 2
+        },
+        {
+            "id": 3,
+            "name": "Coworking fijo",
+            "image": "/images/photo3.jpg",
+            "results": 2
+        },
+        {
+            "id": 4,
+            "name": "Coworking incubador",
+            "image": "/images/photo4.jpg",
+            "results": 2
+        }
+    ]
+}
+

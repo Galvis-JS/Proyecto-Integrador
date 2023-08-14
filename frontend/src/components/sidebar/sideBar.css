@@ -1,0 +1,82 @@
+/* The side navigation menu */
+
+.adminWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 1rem;
+  background-color: #f7f0f4;
+  min-height: 80vh;
+}
+
+.wrapper {
+  width: 100%;
+  background-color: #f7f0f4;
+}
+
+
+.sidebar {
+  
+  max-width: 14%;
+  min-width: 14%;
+  background-color: white;
+  float: left;  
+  box-shadow: 14px 0 10px -8px rgba(99, 99, 99, 0.2);
+  padding: 20px 10px;
+  
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  margin: 5px;
+  text-decoration: none;
+  text-align: left;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #a61f69;
+  color: white;
+  border-radius: 10px;
+  
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #a61f693f;
+  border-radius: 10px;
+}
+
+/* background-color: #555; Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .adminWrapper {
+    flex-direction: column;
+  }
+  .sidebar {
+    box-sizing: border-box;
+    min-width: 100vw;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}

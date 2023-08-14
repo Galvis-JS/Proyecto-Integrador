@@ -1,0 +1,228 @@
+.title {
+    display: flex;
+    background-color: #a61f69;
+    justify-content: space-between;
+    padding: 14px 20px;
+
+}
+
+.title h1 {
+    font-family: Rubik, sans-serif;
+    font-size: 30px;
+    color: #FFF;
+    font-weight: 700;
+
+}
+
+.title .arrowBack svg {
+    margin-right: 20px;
+    width: 33px;
+    fill: #FFF;
+}
+
+.imageContainer {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.star-address {
+    background-color: #e8e3e7;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px
+}
+
+.container {
+    padding: 20px 20px 0 20px
+}
+
+.css-grid {
+    display: grid;
+    grid-gap: 10px;
+}
+
+.item {
+    overflow: hidden;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.item.large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.icon {
+    color: #f2921d;
+}
+
+.more-button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+h2.category {
+    font-family: Rubik, sans-serif;
+    color: #400E32;
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 20px;
+
+}
+
+.with-border-bottom {
+    border-bottom: 1px solid #f2921d;
+}
+
+.comodidades .item {
+    margin: 10px 0;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+}
+
+.icon-container span {
+    margin-left: 10px
+}
+
+.container.calendario {
+    background-color: #e8e3e7;
+    padding: 20px;
+}
+
+.container.calendario .reserva{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+.botonReserva {
+    flex-direction: row;
+    background-color:#FFF;
+    color: #400E32;
+    border: none;
+    padding: 20px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.botonReserva .btn {
+    margin: 20px 0 0 0;
+}
+
+.container.policies {
+    display: grid;
+    grid-template-columns: 1fr ;
+    padding: 20px;
+    grid-gap: 30px;
+    
+}
+
+.container.policies h3 {
+    font-family: Rubik, sans-serif;
+    color: #400E32;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.container.policies p {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 15px;
+}
+
+.container.redes button {
+    margin-right: 10px;
+}
+
+
+@media (min-width: 768px) {
+
+
+    .botonReserva {
+        flex-direction: row;
+        background-color:#FFF;
+        color: #400E32;
+        border: none;
+        padding: 20px 20px;
+        border-radius: 5px;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .botonReserva .btn {
+        margin: 20px 0 0 0;
+    }
+
+
+    .container.policies {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 20px;
+        grid-gap: 30px;
+        
+    }
+}
+
+
+   
+
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .css-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .imageContainer img {
+        width: 600px;
+    }
+
+
+.container.calendario .reserva {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.botonReserva {
+    background-color:#FFF;
+    color: #400E32;
+    border: none;
+    padding: 20px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+.botonReserva .btn {
+    margin: 20px 0 0 0;
+}
+
+.container.policies {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+
+}

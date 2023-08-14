@@ -1,0 +1,74 @@
+  div.autocomplete{
+    padding-top: 0px;
+    width: 100%;
+  }
+ 
+ .autocomplete > input {
+    font-size: 16px;
+    height: 10.1rem;
+    padding: 5px;
+  
+    border: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+  
+  .autocomplete > input[type="text"]{
+    margin-bottom: -1px;
+    border-radius: 10px;
+    font-family: Roboto, sans-serif;
+  }
+  
+  .autocomplete {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 20px;
+  }
+  
+  .autocomplete > input{
+    font-family: Roboto, sans-serif;
+    height: 2.1rem;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+    
+  .autocomplete > input:focus,
+  textarea:focus {
+    border: 3px solid #a61f69;
+    outline: none;
+  }
+  
+
+  .autocomplete-dropdown-container{
+    font-size: 16px;
+    width: 100%;
+    border: 1px solid black;
+    margin: 0px;
+    box-shadow: rgba(99, 99, 99, 0.5) 0px 2px 8px 0px;
+  }
+
+  .autocomplete-dropdown-container:empty {
+    border: none;
+  }
+
+  .loading{
+    margin:5px;
+    padding:10px;
+    color:#a61f69;
+    text-align: center;
+  }
+
+  span.suggestions{
+    display: block;
+    font-family:  Roboto, sans-serif;
+    color:black;
+    padding:3px 5px;
+  }
+
+  span.suggestions:hover{
+    background-color: rgba(30, 144, 255);
+    color: white;
+  }

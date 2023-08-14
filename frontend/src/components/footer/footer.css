@@ -1,0 +1,28 @@
+.footer-comp {
+    height: 75px;
+    left: 0;
+    color: white;
+    background-color: #a61f69;
+    display: flex;
+    align-items: center;
+    padding: 0rem 1rem;
+    width: 100%;
+    bottom: 0;
+    box-sizing: border-box;
+}
+
+.footer-comp div {
+    display: flex;
+    margin-left: auto;
+    gap: 1rem;
+}
+
+.footer-comp p{
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+}
+
+.footer-comp svg {
+    width: 25px;
+}
+

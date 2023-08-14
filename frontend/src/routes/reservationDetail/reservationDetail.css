@@ -1,0 +1,187 @@
+.reservation-detail h2 {
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.reservation-form {
+    display: grid;
+    grid-template-rows: 1fr 770px;
+    background-color: #e8e3e7;
+    padding: 60px;
+}
+
+.grid-2c {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 0 10px 20px 0;
+}
+
+.gray-background {
+    background-color: #fff;
+    padding: 20px 20px 35px 20px;
+    border-radius: 5px;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, .2);
+}
+
+.grid-2c>div>div:first-child {
+    margin-bottom: 20px;
+}
+
+.grid-2c label {
+    margin-bottom: 5px !important;
+    display: block;
+}
+
+.reservation-detail input {
+    border: 1px solid #CCC;
+    background-color: #e8e3e7;
+    padding: 10px;
+    border-radius: 5px !important;
+    width: 100%;
+}
+
+.reservation-aside img {
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+
+.reservation-aside {
+    position: relative;
+    margin-top: 55px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, .2);
+    height: 752px;
+}
+
+.separator {
+    border-bottom: solid 1px #f2921d;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.check {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.reservation-aside button {
+    position: absolute;
+    right: 40px;
+    bottom: 20px;
+    width: 80%;
+}
+
+.reservation-form .calendar {
+    text-align: center;
+}
+
+.reservation-form .horarios {
+    display: flex;
+    margin-right: 10px;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 20px 20px 35px 20px;
+    border-radius: 5px;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, .2);
+}
+
+.reservation-form .horarios select {
+    width: 40%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #CCC;
+    background-color: #e8e3e7;
+}
+
+.reservation-form .horarios p {
+    margin-bottom: 10px;
+}
+
+.reservation-form .horarios label {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.politicas{
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, .2);
+}
+
+@media (min-width: 768px){
+    .reservation-aside {
+        position: relative;
+        margin-top: 55px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 2px 5px 5px rgba(0, 0, 0, .2);
+        height: 1029px;
+    }
+
+    .reservation-form {
+        display: grid;
+        grid-template-rows: 1fr 1050px;
+        background-color: #e8e3e7;
+        padding: 60px;
+    }
+    
+
+}
+
+@media (min-width: 992px) {
+
+    .reservation-form {
+        display: grid;
+        grid-template-columns: 1fr 400px;
+        background-color: #e8e3e7;
+        padding: 30px;
+        height: 1150px;
+    }
+
+    .grid-2c {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin: 0 10px 20px 0;
+    }
+
+
+    .reservation-aside img {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .reservation-aside {
+        position: relative;
+        margin-top: 55px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 2px 5px 5px rgba(0, 0, 0, .2);
+    }
+
+    .separator {
+        border-bottom: solid 1px #f2921d;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .check {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .reservation-aside button {
+        position: absolute;
+        right: 40px;
+        bottom: 20px;
+        width: 80%;
+    }
+}

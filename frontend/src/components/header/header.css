@@ -1,0 +1,260 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: white;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  z-index: 9999;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.logo img {
+  height: 70px;
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
+.logo span {
+  font-family: Rubik, sans-serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 20px;
+  color: #333;
+  display: none;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.buttons a {
+  margin-left: 20px;
+  padding: 1rem;
+  display: none;
+}
+
+.buttons button {
+  margin-left: 20px;
+  padding: 1rem;
+  display: none;
+}
+
+
+nav.menu-open {
+  position: absolute;
+  top: 0%;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  background-color: #fefdfe;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
+}
+
+.nav-header {
+  position: relative;
+  background-color: #f2921d;
+  padding: 35px;
+  font-weight: 700;
+  height: 20px;
+}
+
+
+nav ul {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+
+nav li {
+  margin: 15px 0;
+  text-align: right;
+  border-bottom: 1px solid #333;
+  padding-bottom: 15px;
+}
+
+nav li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+nav.menu-closed {
+  display: none;
+}
+
+.menu-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.menu-btn span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-open {
+  height: auto;
+}
+
+.menu-open.menu-btn span:first-child {
+  background-color: #FFF;
+  transform: translateY(2px) rotate(45deg);
+}
+
+.menu-open.menu-btn span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-open.menu-btn span:last-child {
+  transform: translateY(-4px) rotate(-45deg);
+  background-color: #FFF;
+}
+
+.redes-sociales {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+}
+
+.redes-sociales span {
+  margin-left: 15px;
+}
+
+.redes-sociales svg {
+  width: 30px;
+  fill: #400e32;
+}
+
+.nav-header .avatar {
+  position: absolute;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  border: 2px solid #fff;
+  background-color: #400E32;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 30px;
+}
+
+.nav-header .nombre {
+  position: absolute;
+  top: 65px;
+  left: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
+
+  .buttons a {
+    display: block;
+  }
+
+  .buttons button {
+    display: inline-block;
+  }
+
+  .avatar-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    color: #400E32;
+    border: 2px solid #400E32;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 10px;
+    box-sizing: content-box;
+  }
+
+  .avatar-container .nombre {
+    top: 60px;
+    right: 170px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #400E32;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .logo span {
+    display: inline;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    color: #400E32;
+    border: 2px solid #400E32;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+  }
+
+  .avatar-container .nombre {
+    top: 65px;
+    right: 170px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #400E32;
+  }
+
+  
+
+}

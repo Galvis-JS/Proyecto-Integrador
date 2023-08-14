@@ -1,0 +1,97 @@
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 99vw;
+    height: 82.2vh;
+    background-color: whitesmoke;
+}
+
+.signup {
+    width: 300px;
+    height: 550px;
+    background-color: #a61f69;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.password-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.password-container p {
+    padding: 0 2.2rem;
+    font-size: 12px;
+}
+
+.signup input {
+    width: 70%;
+}
+
+.signup button {
+    width: 50%;
+}
+
+.signup h1 {
+    color: white;
+    font-size: 30px !important;
+}
+
+.signup p {
+    color: white;
+}
+
+.signup-pt1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.signup-pt2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .signup {
+        width: 500px
+    }
+
+    .signup button {
+        width: 50% !important;
+    }
+
+    .password-container p {
+        font-size: 15px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .signup {
+        width: 600px
+    }
+
+    .signup button {
+        width: 50% !important;
+    }
+
+    .password-container p {
+        font-size: 17px;
+    }
+
+}

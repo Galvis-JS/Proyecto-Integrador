@@ -1,0 +1,103 @@
+.container-success {
+    height: auto;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.success {
+    background-color: #a61f69;
+    border-radius: 10px;
+    width: 320px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 90%
+}
+
+.body-info {
+    width: 90%;
+    padding: .5rem;
+    border-radius: 10px;
+    background-color: #E8E3E7;
+}
+
+.body-sub-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.body-info > h4 {
+    color: #400E32;
+    padding: .3rem 0;
+}
+
+.body-sub-info > p {
+    font-size: .8rem;
+    padding: .4rem 0;
+}
+
+.verified-icon {
+    font-size: 50px!important; 
+    color: white
+}
+
+.title, .message {
+    color: white;
+}
+
+.title {
+    font-size: 1.2rem;
+}
+
+.button-success {
+    width: 50%;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .verified-icon {
+        font-size: 70px!important; 
+    }
+    .title {
+        font-size: 1.4rem;
+    }
+    .message {
+        font-size: 1rem;
+    }
+    .success {
+        width: 480px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .verified-icon {
+        font-size: 90px!important; 
+    }
+    .title {
+        font-size: 2rem;
+    }
+    .message {
+        font-size: 1.4rem;
+    }
+    .success {
+        width: 600px;
+    }
+    .button-success{
+        width: 40%;
+    }
+}

@@ -1,0 +1,36 @@
+html {
+    font-family: Roboto, sans-serif;
+}
+
+.btn {
+    background-color: #f2921d;
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: Rubik, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #f7c281;
+}
+
+.input[type=text], .input[type=email], .input[type=password] {
+    border-radius: 5px;
+    font-family: Roboto, sans-serif;
+    padding: 10px;
+    border: none;
+    color: #7F7F7F;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+h1, h2, h3, h4{
+    font-family: Rubik, sans-serif;
+}
+

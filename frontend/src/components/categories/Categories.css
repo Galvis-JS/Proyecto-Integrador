@@ -1,0 +1,23 @@
+.categories-container {
+  margin-bottom: 10px;
+  display:flex;
+  flex-flow: row wrap;
+
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.loading-container {
+  margin-bottom: 10px;
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.products-paginator {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding-top: 30px;
+}

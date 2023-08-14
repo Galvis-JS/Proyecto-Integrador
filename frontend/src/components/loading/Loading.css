@@ -1,0 +1,49 @@
+.load-container{   
+  display: grid;
+    place-content: center;
+    height: 150px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 200;
+    background-color: transparent;
+    color: #00b8de;
+    padding: 100px 0px;
+}
+.loading{
+    width: 120px;
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 0 auto; 
+}
+.load-text{ 
+  padding-top:20px
+}
+.loading span{
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.point {
+    width: 20px;
+    height: 20px;
+    background-color: #a61f69;
+    animation: salto .5s alternate
+    infinite;
+  border-radius: 50%  
+}
+.point:nth-child(2) {
+    animation-delay: .18s;
+}
+.point:nth-child(3) {
+    animation-delay: .37s;
+}
+@keyframes salto {
+    from {
+        transform: scaleX(1.25);
+    }
+    to{
+        transform: 
+        translateY(-50px) scaleX(1);
+    }
+}
